@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Snake | Nokia Style</title>
+  <script type="module" crossorigin src="/assets/index-CyBE2j4C.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BSrYiYzS.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="screen">
+            <div id="header">
+                <div id="score-display">Score: <span id="score">0</span></div>
+                <div id="high-score-display">High: <span id="high-score">0</span></div>
+            </div>
+            
+            <canvas id="game-canvas" width="400" height="400"></canvas>
+            
+            <div id="menu-screen" class="screen">
+                <h1>SNAKE</h1>
+                <div class="menu-options">
+                    <button id="play-btn" class="menu-btn">PLAY</button>
+                    <button id="options-btn" class="menu-btn">OPTIONS</button>
+                    <button id="leaderboard-btn" class="menu-btn">LEADERBOARD</button>
+                </div>
+            </div>
+            
+            <div id="options-screen" class="screen" style="display: none;">
+                <h2>OPTIONS</h2>
+                <div class="option">
+                    <label>Speed: </label>
+                    <select id="speed-select">
+                        <option value="6">Slow</option>
+                        <option value="8" selected>Normal</option>
+                        <option value="12">Fast</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <label>Walls: </label>
+                    <select id="walls-select">
+                        <option value="solid" selected>Solid</option>
+                        <option value="wrap">Wrap</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <label>Sound: </label>
+                    <input type="checkbox" id="sound-toggle" checked>
+                </div>
+                <button id="back-btn" class="menu-btn">BACK</button>
+            </div>
+            
+            <div id="game-over-screen" class="screen" style="display: none;">
+                <h2>GAME OVER</h2>
+                <div id="final-score">Score: 0</div>
+                <div id="high-score-msg" style="display: none;">NEW HIGH SCORE!</div>
+                <input type="text" id="player-name" placeholder="Enter name" maxlength="10" style="display: none;">
+                <button id="submit-score-btn" class="menu-btn" style="display: none;">SUBMIT</button>
+                <button id="play-again-btn" class="menu-btn">PLAY AGAIN</button>
+                <button id="main-menu-btn" class="menu-btn">MAIN MENU</button>
+            </div>
+            
+            <div id="leaderboard-screen" class="screen" style="display: none;">
+                <h2>LEADERBOARD</h2>
+                <div id="leaderboard-list"></div>
+                <button id="leaderboard-back-btn" class="menu-btn">BACK</button>
+            </div>
+            
+            <div id="pause-screen" class="screen" style="display: none;">
+                <h2>PAUSED</h2>
+                <p>Press SPACE to continue</p>
+            </div>
+        </div>
+        
+        <div id="controls">
+            <div id="touch-controls">
+                <div class="control-row">
+                    <button id="up-btn" class="control-btn">↑</button>
+                </div>
+                <div class="control-row">
+                    <button id="left-btn" class="control-btn">←</button>
+                    <button id="down-btn" class="control-btn">↓</button>
+                    <button id="right-btn" class="control-btn">→</button>
+                </div>
+            </div>
+            <div id="action-controls">
+                <button id="pause-btn" class="action-btn">PAUSE</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

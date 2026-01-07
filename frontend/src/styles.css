@@ -1,0 +1,271 @@
+/* Nokia-inspired retro styling */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', monospace;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    user-select: none;
+}
+
+#game-container {
+    background: #c5d4e8;
+    padding: 20px;
+    border-radius: 15px;
+    border: 3px solid #556b8a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 480px;
+    width: 100%;
+}
+
+#screen {
+    background: #9db4d8;
+    border: 2px solid #334155;
+    border-radius: 8px;
+    padding: 15px;
+    position: relative;
+    min-height: 450px;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+#game-canvas {
+    background: #1a2e1a;
+    border: 2px solid #334155;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.screen {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    background: #9db4d8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.screen h1 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.screen h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-btn, .action-btn {
+    background: #556b8a;
+    color: white;
+    border: 2px solid #334155;
+    padding: 12px 24px;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 120px;
+}
+
+.menu-btn:hover, .action-btn:hover {
+    background: #334155;
+    transform: translateY(-1px);
+}
+
+.menu-btn:active, .action-btn:active {
+    transform: translateY(1px);
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-weight: 700;
+    min-width: 200px;
+}
+
+.option select {
+    background: white;
+    border: 2px solid #334155;
+    padding: 5px;
+    font-family: 'Orbitron', monospace;
+    border-radius: 4px;
+}
+
+.option input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+#controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#touch-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.control-row {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.control-btn {
+    width: 50px;
+    height: 50px;
+    background: #556b8a;
+    color: white;
+    border: 2px solid #334155;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.1s;
+}
+
+.control-btn:active {
+    background: #334155;
+    transform: scale(0.95);
+}
+
+#action-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#final-score {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+#high-score-msg {
+    color: #ff6b35;
+    font-weight: 900;
+    font-size: 18px;
+    margin: 10px 0;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+#player-name {
+    padding: 10px;
+    border: 2px solid #334155;
+    border-radius: 4px;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0;
+    background: white;
+}
+
+#leaderboard-list {
+    background: white;
+    border: 2px solid #334155;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 20px 0;
+    max-height: 200px;
+    overflow-y: auto;
+    min-width: 250px;
+}
+
+.leaderboard-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    font-weight: 700;
+}
+
+.leaderboard-entry:last-child {
+    border-bottom: none;
+}
+
+.leaderboard-rank {
+    color: #556b8a;
+}
+
+.leaderboard-score {
+    color: #ff6b35;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    #game-container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    #game-canvas {
+        width: 100%;
+        height: auto;
+    }
+    
+    .screen h1 {
+        font-size: 24px;
+    }
+    
+    .screen h2 {
+        font-size: 18px;
+    }
+    
+    .control-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+/* Hidden by default */
+.hidden {
+    display: none !important;
+}
