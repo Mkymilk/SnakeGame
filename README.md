@@ -45,6 +45,7 @@ A nostalgic Snake game inspired by the classic Nokia N72 UI and feel. This web a
 - **Node.js** 18+ and npm
 - **.NET 9 SDK**
 - **Git**
+remark **extract file backend.rar before step 1**
 
 ### 1. Clone the Repository
 ```bash
@@ -356,3 +357,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Have fun playing! 🎮🐍**
+
