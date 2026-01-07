@@ -2,8 +2,6 @@
 
 A nostalgic Snake game inspired by the classic Nokia N72 UI and feel. This web application features a TypeScript frontend with HTML5 Canvas rendering and a C# ASP.NET Core backend for global high score management.
 
-![Snake Game Preview](docs/preview.png)
-
 ## 🎮 Features
 
 ### Game Features
@@ -357,5 +355,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Have fun playing! 🎮🐍**
+
 
 
